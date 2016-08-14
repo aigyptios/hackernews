@@ -53,6 +53,7 @@ table {
 
 * {
     box-sizing: border-box;
+    transition: all 300ms;
 }
 
 body {
@@ -192,11 +193,50 @@ button:hover {
     margin: 5px 2px;
 }
 
-
-
-* {
-    transition: all 300ms;
+.item__by,
+.item__score {
+    display: inline-block;
 }
+.item__score::after {
+    content: ' point(s)';
+}
+.item__by::before {
+    content: ' , posted by ';
+}
+.item__time a[href],
+.item__by a[href] {
+    color: tomato;
+}
+
+/*
+
+.newslist--list {
+    display: table;
+}
+
+.newslist__item {
+    display: table-row;
+}
+
+.newslist--list .item__title {
+    display: table-cell;
+    width: 450px;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.newslist--list .item__score,
+.newslist--list .item__by,
+.newslist--list .item__time,
+.newslist--list .item__by,
+.newslist--list .item__discuss {
+    display: table-cell;
+}
+
+
+*/
 
 @media screen and (min-width: 865px) {
 
@@ -235,9 +275,6 @@ button:hover {
     .newslist--grid .newslist__item {
         width: 300px;
         margin: 10px;
-    }
-    .newslist--grid .newslist__item > div {
-        display: block;
     }
 
 }

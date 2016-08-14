@@ -13,12 +13,12 @@ class App extends React.Component {
     this.links = newsService.availableNewsTypes.map(type => {
         // Create load function for type of news
         let loadFunction = () => {
+            this.newsLoader = newsService[type.fnName](this.loadNewsFromData.bind(this));
             this.setState({
                 stories: [],
                 news: type.text,
                 title: type.title
             });
-            this.newsLoader = newsService[type.fnName](this.loadNewsFromData.bind(this));
         };
 
         // return link object
