@@ -4,4 +4,7 @@ This app was created with the [create-react-app](https://github.com/facebookincu
 
 All of the React components are in `/components`, aside from `App.js`.
 
-The `NewsViewer` component is not used. I kept it here because I'm lazy (or it might come in handy later).
+The `NewsViewer` component is not used.
+
+TODO: Tests
+TODO: Caching of `axios.get` AJAX calls.
