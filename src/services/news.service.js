@@ -43,7 +43,7 @@ class NewsLoader {
 
 }
 
-class NewService {
+class NewsService {
 
     constructor() {
         this.baseURL = 'https://hacker-news.firebaseio.com/v0/';
@@ -75,7 +75,7 @@ class NewService {
             title: 'Show HN'
         }, {
             endpoint: 'ask',
-            fn: 'getAskStories',
+            fnName: 'getAskStories',
             text: 'Ask HN',
             title: 'Ask HN'
         }];
@@ -91,4 +91,4 @@ class NewService {
 
 }
 
-export default new NewService()
+export default new NewsService()
